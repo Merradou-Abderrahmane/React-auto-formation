@@ -6,13 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <title>Hello world</title>
 </head>
 <body>
-    <div id="root"></div>
-    <script>
-        const element = React.createElement('h1', null, 'Hello world');
-        ReactDOM.render(element, document.getElementById('root'));
+    <div id="mydiv"></div>
+
+    <script type="text/babel">
+      function Hello() {
+        return <h1>Hello World!</h1>;
+      }
+
+      ReactDOM.render(<Hello />, document.getElementById('mydiv'))
     </script>
+    <!-- These are both just regular functions but they're wrapped up inside Babel
+         so they'll work across different browsers without 
+        any issues or errors because Babel translates them into ES6/ES5 syntax automatically -->
 </body>
 </html>
