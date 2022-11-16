@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="parameter"></p>
+    <script>
+        // before ES6
+        hello = function() {
+        return "Hello World!";
+        }
+        // after ES6
+        hello = () => {
+        return "Hello World!";
+        }
+        // or even shorter If the function has only one statement, 
+        // and the statement returns a value, you can remove the brackets and the return keyword:
+        hello = () => "Hello World!";
+
+        // Arrow Function With Parameters:
+        parameter = (anything) => "Hello " + anything;
+        document.getElementById("parameter").innerHTML = parameter("World");
+
+        
+
+        
+
+
+    </script>
+</body>
+</html>
