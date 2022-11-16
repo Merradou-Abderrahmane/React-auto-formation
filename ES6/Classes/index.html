@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+  
+<script>
+    // ES6 Classes - Classes are a template for creating objects.
+    //    They encapsulate data with code to work on that data.
+class Animal {
+    // constructor is a special method that is called when 
+    //   a new instance of the class is created
+    constructor(name){
+        this.animalName = name;
+    }
+    // methods are functions that are defined inside the class
+    speak(){
+        document.write(this.animalName + ' makes a noise.');
+    }
+}
+
+const dog = new Animal("Dog") // create a new instance of the Animal class
+document.write(dog.animalName + "<br>"  );
+dog.speak(); // call the speak method on the dog instance
+document.write("<br>"  );
+
+// inheritance
+
+     class Pet extends Animal {
+        constructor(name, owner){
+            super(name); // call the super class constructor and pass in the name parameter
+            this.owner = owner;
+        }
+        speak(){
+            document.write(this.animalName + ' makes a noise.');
+        }
+    }
+
+    const cat = new Pet("Cat", "Merradou");
+    document.write(cat.animalName + " is owned by " + cat.owner + "<br>"  );
+</script>
+
+</body>
+</html>
