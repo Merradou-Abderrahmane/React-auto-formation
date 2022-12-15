@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <title>Props</title>
+</head>
+<body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+        
+        class Car extends React.Component {
+            constructor(props) {
+                // super is used to call the constructor of the parent class
+                super(props);
+            }
+            render() {
+                return <h2>I am a {this.props.brand} !</h2>
+            }
+        }
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(<Car brand="Ford" />);
+
+    </script>
+</body>
+</html>
