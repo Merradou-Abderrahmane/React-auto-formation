@@ -1,25 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import './style.css'
 
-function App() {
+function App(){
+  let x = 5;
+  let y = 6;
+  let z = x + y;
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1> La somme</h1>
+      <p>
+        La somme de x + y = {z}
+      </p>
+
     </div>
-  );
+  );  
 }
 
 export default App;
